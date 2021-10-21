@@ -72,7 +72,21 @@ h1 {
 
 div.end {
   position: absolute;
-  left: 35vw;
+  left: 34vw;
+  right: 36vw;
+  top: 40vh;
+  bottom: 40vh;
+  font-size: 10rem;
+  font-weight: bolder;
+  background: red;
+  z-index: 100000000000;
+  transition: 0.3s ease-in-out;
+}
+
+div.start {
+  position: absolute;
+  height: 25rem;
+  left: 37vw;
   right: 36vw;
   top: 40vh;
   bottom: 40vh;

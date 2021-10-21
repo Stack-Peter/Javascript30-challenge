@@ -35,12 +35,14 @@
     </div>
   </div>
   <div data-end="k">Fim da linha!</div>
+  <div data-start="k">Escolha uma dificuldade!</div>
 
 <script>
   const holes = document.querySelectorAll('.hole');
   const scoreBoard = document.querySelector('.score');
   const moles = document.querySelectorAll('.mole');
   const end = document.querySelector('[data-end="k"]')
+  const start = document.querySelector('[data-start="k"]')
   end.style.opacity = "0"
   const btns = document.querySelectorAll('[data-btn="btn"]')
   btns.forEach((i) => i.addEventListener('click', () => {
@@ -78,16 +80,21 @@
   }
 
   function startGame() {
+    if (final === undefined) {
+      start.classList.add('start')
+    } else {
+      start.classList.remove('start')
       end.classList.remove('end')
-    scoreBoard.textContent = 0;
-    timeUp = false;
-    score = 0;
-    peep();
-    setTimeout(() => {
+      scoreBoard.textContent = 0;
+      timeUp = false;
+      score = 0;
+      peep();
+      setTimeout(() => {
         timeUp = true
         end.style.opacity = "1"
         end.classList.add('end')
-    }, 5000)
+    }, 12500)
+    }
   }
 
   function bonk(e) {
